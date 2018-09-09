@@ -23,35 +23,10 @@ namespace Sample.Job.Controllers
             var result = await _hangfireClient.SendTimerJobAsync(new HttpJobItem
             {
                 Corn = Cron.MinuteInterval(10),
-                Url = "https://blog.csdn.net/u014401141/article/details/71086757",
-                JobName = "我是外部任务",
+                Url = "https://www.cnblogs.com/xiaoliangge/",
+                JobName = "I'm external Job by restful Api",
             }, TaskType.Recurringjob);
-            return new string[] { "我成功了吗", $"{result}" };
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return new string[] { "Do i succeeded?", $"{result}" };
         }
     }
 }
