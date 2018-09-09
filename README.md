@@ -10,6 +10,17 @@ Chaunce.Hangfire.Extension fork from [Hangfire.HttpJob](https://github.com/yuzd/
 #### Please visit our website at http://www.cnblogs.com/xiaoliangge/ for the most current information about this project.
 
 Chaunce.Hangfire is free,open source.
+Chaunce.Hangfire can be called by Java and go.
+Now only provide C# sdk.
+
+Installation
+-------------
+
+Chaunce.Hangfire.Cient is available as a NuGet package. You can install it using the NuGet Package Console window:
+
+```
+PM> Install-Package Chaunce.Hangfire.Client -Version 1.0.0
+```
 
 
 ## :boom:  How to use
@@ -67,5 +78,6 @@ there is chauncehangfire
     "HangfireConnection": "server=.;database=chauncehangfire;uid=sa;pwd=111111"
   },
 ```
-
+### Test Picture
+![](https://github.com/liuyl1992/Chaunce.Hangfire/blob/master/123512.gif)
 
