@@ -23,7 +23,6 @@ namespace Sample.Job.Controllers
             var result = await _hangfireClient.SendTimerJobAsync(new HttpJobItem
             {
                 Corn = Cron.MinuteInterval(10),
-                //Corn = "*/1 * * * *",
                 Url = "https://blog.csdn.net/u014401141/article/details/71086757",
                 JobName = "我是外部任务",
             }, TaskType.Recurringjob);
