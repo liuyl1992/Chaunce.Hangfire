@@ -79,5 +79,5 @@ there is chauncehangfire
   },
 ```
 ### Test Picture
-![](https://github.com/liuyl1992/Chaunce.Hangfire/blob/master/123512.gif)
+![](https://images2018.cnblogs.com/blog/578477/201809/578477-20180910003009116-1317578441.gif)
 
