@@ -13,6 +13,16 @@ Chaunce.Hangfire is free,open source.
 Chaunce.Hangfire can be called by Java and go.
 Now only provide C# sdk.
 
+Installation
+-------------
+
+Chaunce.Hangfire.Cient is available as a NuGet package. You can install it using the NuGet Package Console window:
+
+```
+PM> Install-Package Chaunce.Hangfire.Client -Version 1.0.0
+```
+
+
 ## :boom:  How to use
 ### Step 1:appsettings.json
 ```xml
