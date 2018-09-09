@@ -18,9 +18,7 @@ namespace Chaunce.Hangfire.Client
             {
                 x.BaseAddress = new Uri($"{options.BaseUrl}");
                 x.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("*/*"));
-                //x.DefaultRequestHeaders.Connection.Add("keep-alive");
-                //x.DefaultRequestHeaders.Add("Cache-Control", "no-cache");
-                x.DefaultRequestHeaders.Add("RequestVerificationToken", "CfDJ8PAS56rDRhRCqkF3gbzNyiuw5W20WcHEdRNIoiDH48mSyiMvwZgO6oVydcWc3giBNn5Ho7nfQ4Akvw2JYUJ5Qdikt_CenYV8WdTljuyqnlBx9OIi_E4Q17WXnaRoelJ8SiDCF4NlAnnRK44mDk-GNCU");
+                //x.DefaultRequestHeaders.Add("RequestVerificationToken", "CfDJ8PAS56rDRhRCqkF3gbzNyiuw5W20WcHEdRNIoiDH48mSyiMvwZgO6oVydcWc3giBNn5Ho7nfQ4Akvw2JYUJ5Qdikt_CenYV8WdTljuyqnlBx9OIi_E4Q17WXnaRoelJ8SiDCF4NlAnnRK44mDk-GNCU");
             })
             .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
             {

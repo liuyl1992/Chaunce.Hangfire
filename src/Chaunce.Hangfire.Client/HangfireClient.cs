@@ -53,7 +53,7 @@ namespace Chaunce.Hangfire.Client
             }));
 
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            client.DefaultRequestHeaders.Add("Cookie", ".AspNetCore.Antiforgery.sTiOh67Tj1Y=CfDJ8PAS56rDRhRCqkF3gbzNyisHFL1Ycxw02RZADTY4pRk7H4vimKH7LK5KRnqeXhpdnv8aiuO0mpV-HSu2572KyPrltqjeRa77GojWa8eaS2oaiCcqlGUYhalADkc9lUpLBGachigzzl-sfhTXuWYURbg;");
+            //client.DefaultRequestHeaders.Add("Cookie", ".AspNetCore.Antiforgery.sTiOh67Tj1Y=CfDJ8PAS56rDRhRCqkF3gbzNyisHFL1Ycxw02RZADTY4pRk7H4vimKH7LK5KRnqeXhpdnv8aiuO0mpV-HSu2572KyPrltqjeRa77GojWa8eaS2oaiCcqlGUYhalADkc9lUpLBGachigzzl-sfhTXuWYURbg;");
             var response = await client.SendAsync(new HttpRequestMessage
             {
                 Method = HttpMethod.Post,

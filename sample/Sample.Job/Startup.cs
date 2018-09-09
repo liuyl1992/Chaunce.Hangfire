@@ -26,7 +26,9 @@ namespace Sample.Job
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHangfireClient(new HangfireClientOptions { BaseUrl = "http://localhost:5000", RecurringJobUrl = "hangfire/httpjob?op=recurringjob" });
+            var option = Configuration.GetSection(nameof(HangfireClientOptions)).Get<HangfireClientOptions>();
+
+            services.AddHangfireClient(option);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
