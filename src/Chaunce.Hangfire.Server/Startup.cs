@@ -42,13 +42,27 @@ namespace Chaunce.Hangfire.Server
         {
             app.Use(async (context, next) =>
             {
-                var path = context.Request.Path;
+                 var locaIp= context.Connection.LocalIpAddress.ToString();
+                 var remoteIp = context.Connection.RemoteIpAddress.ToString();
                 await next.Invoke();
             });
             app.UseHangfireServer();
             app.UseHangfireDashboard(options: new DashboardOptions
             {
-                Authorization = new[] { new AuthorizationFilter() }
+                Authorization = new[] { new BasicAuthAuthorizationFilter(new BasicAuthAuthorizationFilterOptions
+            {
+                RequireSsl = false,
+                SslRedirect = false,
+                LoginCaseSensitive = true,
+                Users = new []
+                {
+                    new BasicAuthAuthorizationUser
+                    {
+                        Login = "admin",
+                        PasswordClear =  "test"
+                    }
+                }
+            }) }
             });
 
             if (env.IsDevelopment())

@@ -20,7 +20,7 @@
     "Sample.Job": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api",
       "applicationUrl": "http://localhost:7000;",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
