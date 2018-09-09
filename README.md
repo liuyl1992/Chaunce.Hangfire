@@ -3,7 +3,7 @@
 
 Chaunce.Hangfire is a free, open source,Chaunce.Hangfire.Extension and Chaunce.Hangfire.Client built on the .NETStandard platform.
 Chaunce.Hangfire.Extension fork from [Hangfire.HttpJob](https://github.com/yuzd/Hangfire.HttpJob)!
-[![ http://www.cnblogs.com/xiaoliangge/](https://badges.gitter.im/Join%20Chat.svg)](http://www.cnblogs.com/xiaoliangge/)
+[![https://www.cnblogs.com/xiaoliangge/p/9616249.html](https://badges.gitter.im/Join%20Chat.svg)](https://www.cnblogs.com/xiaoliangge/p/9616249.html)
 
 ## About Chauce.Hangfire
 
