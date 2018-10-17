@@ -58,11 +58,32 @@ namespace Chaunce.Hangfire.Extension
             return request;
         }
 
-
+        /// <summary>
+        /// 执行
+        /// 每个JobTask只能执行一个
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="jobName"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         [AutomaticRetry(Attempts = 3)]
         [DisplayName("HttpJob:{1}")]
         public static async Task Excute(HttpJobItem item, string jobName = null, PerformContext context = null)
         {
+            
+            var mon = JobStorage.Current.GetMonitoringApi();
+            var processingJobs = mon.ProcessingJobs(0, int.MaxValue)
+                .Where(o => o.Value.Job.Args[1].ToString() == jobName).ToList();
+
+            //如果任务没执行完，删除新的任务
+            if (processingJobs.Count() >= 2)
+            {
+                var removeId = processingJobs.Max(s => s.Key);
+                RecurringJob.RemoveIfExists(removeId);
+                BackgroundJob.Delete(removeId);
+                return;
+            }
+            
             try
             {
                 context.WriteLine(jobName);
